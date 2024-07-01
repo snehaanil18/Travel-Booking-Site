@@ -1,0 +1,9 @@
+.home-card:hover .card-title,
+.home-card:hover .card-text {
+    background-color: rgba(0, 0, 0, 0.788); /* Semi-transparent black background */
+    color: white; /* White text color */
+    padding: 5px; /* Padding for better readability */
+    border-radius: 5px;
+    font-size: larger;
+    /* Rounded corners */
+}
