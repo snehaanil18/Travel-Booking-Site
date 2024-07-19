@@ -67,3 +67,11 @@ export const verifyPaymentAPI = async(amount) => {
 export const updatePackageAPI = async(packageId,reqBody,reqHeader) => {
     return await commonAPI("put",`${serverURL}/package/update-package/${packageId}`,reqBody,reqHeader)
 }
+
+export const addBookingAPI = async(packageId,reqBody,reqHeader) => {
+    return await commonAPI("post",`${serverURL}/add-booking/${packageId}`,reqBody,reqHeader)
+}
+
+export const getBookingAPI = async (packageId,reqHeader) => {
+    return await commonAPI("get",`${serverURL}/view-bookings/${packageId}`,'',reqHeader)
+}

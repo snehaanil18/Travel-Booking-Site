@@ -12,10 +12,10 @@ function Flight() {
         slots: "",
         price: ""
     })
-    console.log(flightData);
+
 
     const handleAdd = async() =>{
-        console.log('add');
+
         const {id,from,to,date,slots,price} = flightData
     
         if(!id||!from||!to||!date||!slots||!price){
@@ -37,7 +37,7 @@ function Flight() {
             }
             //api call
             const result = await addFlightAPI(reqBody,reqHeader)
-            console.log(result);
+
     
             if(result.status==200){
               alert("Flight added successfully")

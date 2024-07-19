@@ -11,7 +11,7 @@ import { serverURL } from '../Services/serverURL';
 import { Link } from 'react-router-dom';
 
 function HomeCard({ pack }) {
-    console.log(pack._id);
+
     return (
         <div>
             <Link to={`/location/${pack._id}`}>

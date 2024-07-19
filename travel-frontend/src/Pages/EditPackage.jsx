@@ -11,7 +11,7 @@ import Swal from 'sweetalert2'
 
 
 function EditPackage({item}) {
-    // console.log(item);
+   
     const {editPackageResponse, setEditPackageResponse} = useContext(editPackageResponseContext )
     const [show, setShow] = useState(false);
     const [fileStatus, setFileStatus] = useState(false)
@@ -71,7 +71,7 @@ function EditPackage({item}) {
     
           //api call
           const result = await updatePackageAPI(id,reqBody,reqHeader)
-          console.log(result);
+          
           if(result.status===200){
             Swal.fire({
                 title: 'Success',

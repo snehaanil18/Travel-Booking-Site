@@ -10,10 +10,10 @@ function Header() {
     const [admin, setAdmin] = useState("")
 
     useEffect(() => {
-        // console.log("useEffect for token is triggered");
+
         if (sessionStorage.getItem("admin")) {
           setAdmin(sessionStorage.getItem("admin"))
-          // console.log(token);
+
     
         }
         else {

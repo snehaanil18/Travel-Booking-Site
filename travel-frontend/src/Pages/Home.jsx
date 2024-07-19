@@ -13,10 +13,10 @@ function Home() {
 
   const getHomePackage = async(req,res) => {
     const result = await homePackageAPI()
-    console.log(result);
+    
     if(result.status==200){
         setHomePackage(result.data)
-        console.log(homePackage);
+        
     }
     else{
         console.log(result.response.data);

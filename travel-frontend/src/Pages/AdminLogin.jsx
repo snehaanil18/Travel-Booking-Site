@@ -26,7 +26,7 @@ function AdminLogin({ register }) {
         }
         else{
           const result = await registerAdminAPI(userData)
-          console.log(result);
+          
           if(result.status===200){
             Swal.fire({
               title: 'Success',
@@ -51,7 +51,7 @@ function AdminLogin({ register }) {
       
           }
         }
-        console.log(userData);
+     
       }
 
     const handleLogin = async (e) => {
@@ -66,9 +66,9 @@ function AdminLogin({ register }) {
         }
         else {
             const result = await loginAdminAPI(userData)
-            console.log(result);
+           
             if (result.status === 200) {
-                console.log(result);
+               
                 sessionStorage.setItem("username", result.data.existingAdmin.username)
                 sessionStorage.setItem("token", result.data.token)
                 sessionStorage.setItem("admin", result.data.existingAdmin._id)
@@ -95,7 +95,7 @@ function AdminLogin({ register }) {
 
             }
         }
-        console.log(userData);
+      
     }
 
     return (

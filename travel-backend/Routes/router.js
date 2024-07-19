@@ -8,6 +8,8 @@ const packageController = require('../Controllers/packageController')
 
 const adminController = require('../Controllers/adminController')
 
+const bookingController = require('../Controllers/bookingController')
+
 const multerConfig = require('../Middlewares/multerMiddleware')
 
 const router = express.Router()
@@ -80,5 +82,12 @@ router.post("/order/validate", async (req, res) => {
   router.put('/package/update-package/:pid',jwtMiddleware,packageController.updateUserPackage)
 
   router.delete('/delete-package/:pid',jwtMiddleware,packageController.deletePackage)
+
+
+  //add Booking
+  router.post('/add-booking/:pid',jwtMiddleware,bookingController.addBooking)
+
+  //view bookings on particular package
+  router.get('/view-bookings/:pid',jwtMiddleware,bookingController.viewBookings)
 
 module.exports = router

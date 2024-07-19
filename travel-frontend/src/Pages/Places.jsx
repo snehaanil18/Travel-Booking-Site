@@ -12,9 +12,7 @@ function Places() {
   const navigate = useNavigate()
 
   const getAllPackages = async (req, res) => {
-    console.log('sending requet');
     const result = await allPackagesAPI(searchKey)
-    console.log(result);
     if (result.status === 200) {
       setAllPackages(result.data)
     }
@@ -24,19 +22,14 @@ function Places() {
 
   }
 
-  console.log(allPackages);
-
   useEffect(() => {
     getAllPackages()
   }, [searchKey])
-  console.log(searchKey);
+
 
   useEffect(() => {
-    // console.log("useEffect for token is triggered");
     if (sessionStorage.getItem("admin")) {
       setAdmin(sessionStorage.getItem("admin"))
-      // console.log(token);
-
     }
     else {
       setAdmin("")

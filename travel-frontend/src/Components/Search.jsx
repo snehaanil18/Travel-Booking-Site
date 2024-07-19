@@ -18,9 +18,9 @@ function Search() {
   const [open, setOpen] = useState(false);
 
   const getAllPackages = async () => {
-    console.log('sending request');
+
     const result = await allPackagesAPI(searchKey);
-    console.log(result);
+
     if (result.status === 200) {
       setAllPackages(result.data);
     } else {

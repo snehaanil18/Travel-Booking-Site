@@ -25,7 +25,7 @@ function Auth({ register }) {
     }
     else{
       const result = await registerAPI(userData)
-      console.log(result);
+    
       if(result.status===200){
         Swal.fire({
           title: 'Success',
@@ -50,7 +50,6 @@ function Auth({ register }) {
   
       }
     }
-    console.log(userData);
   }
 
 
@@ -66,7 +65,7 @@ function Auth({ register }) {
     }
     else{
       const result = await loginAPI(userData)
-      console.log(result);
+      
       if(result.status===200){
   
         sessionStorage.setItem("username",result.data.existingUser.username)
@@ -94,7 +93,7 @@ function Auth({ register }) {
   
       }
     }
-    console.log(userData);
+  
   }
 
   return (
